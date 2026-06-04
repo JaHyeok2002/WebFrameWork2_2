@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<footer th:fragment="practiceFooter" class="container mt-5 mb-3">
+    <div class="text-center text-muted small border-top pt-3">
+        실습 수행 일시:
+        <span th:text="${#temporals.format(#temporals.createNow(), 'yyyy-MM-dd HH:mm:ss')}"></span>
+        | 학번: 여기에_학번입력 | 성명: 구자혁
+    </div>
+</footer>
+</body>
+</html>
