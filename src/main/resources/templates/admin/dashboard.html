@@ -28,6 +28,7 @@
                 <li class="nav-item"><a class="nav-link" th:href="@{/products}">상품 목록</a></li>
                 <li class="nav-item"><a class="nav-link" th:href="@{/products/add}">상품 등록</a></li>
                 <li class="nav-item"><a class="nav-link active" th:href="@{/admin/dashboard}">관리자</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/user/password}">비밀번호 변경</a></li>
             </ul>
             <form th:action="@{/logout}" method="post" class="d-flex">
                 <button class="btn btn-outline-light btn-sm px-3">로그아웃</button>
@@ -42,7 +43,6 @@
         <p class="mb-0 opacity-75">ADMIN 권한 전용 영역입니다.</p>
     </div>
 
-    <!-- 통계 요약 -->
     <div class="row g-3 mb-4">
         <div class="col-md-4">
             <div class="card menu-card p-4 border-start border-4 border-primary">
@@ -64,12 +64,11 @@
         </div>
     </div>
 
-    <!-- 관리 메뉴 -->
     <div class="row g-3">
         <div class="col-md-4">
             <div class="card menu-card p-4 border-start border-4 border-primary">
                 <h6 class="fw-bold">상품 관리</h6>
-                <p class="text-muted small mb-3">상품 목록 조회 및 등록</p>
+                <p class="text-muted small mb-3">상품 목록 조회, 등록, 수정, 삭제</p>
                 <div class="d-flex gap-2">
                     <a th:href="@{/products}" class="btn btn-primary btn-sm">목록</a>
                     <a th:href="@{/products/add}" class="btn btn-outline-primary btn-sm">등록</a>
@@ -95,6 +94,7 @@
     </div>
 </div>
 
+<div th:replace="~{fragments/footer :: practiceFooter}"></div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
